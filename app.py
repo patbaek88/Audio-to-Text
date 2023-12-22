@@ -29,6 +29,11 @@ def main():
 
     # Upload the audio file
     audio_file = st.file_uploader("Upload an audio file", type=["mp3", "wav", "ogg"])
+    wav_filename = 'output.wav'
+
+    sound = AudioSegment.from_file(audio_file, format='m4a')
+    sound.export('audio_file.wav', format='wav')
+    audio_file = 'audio_file.wav'
 
     if audio_file is not None:
         # Split the audio file into 5-minute chunks
