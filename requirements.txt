@@ -1,4 +1,5 @@
 SpeechRecognition
+os
 pydub
 AudioSegment
 soundfile
