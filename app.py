@@ -29,7 +29,7 @@ def main():
 
     # Upload the audio file
     audio_file = st.file_uploader("Upload an audio file", type=["mp3", "wav", "ogg"])
-    wav_filename = 'output.wav'
+    wav_filename = 'audio_file.wav'
 
     sound = AudioSegment.from_file(audio_file, format='m4a')
     sound.export('audio_file.wav', format='wav')
