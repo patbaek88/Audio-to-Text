@@ -41,7 +41,7 @@ def main():
                 chunk_start = i * CHUNK_DURATION
                 chunk_end = min((i + 1) * CHUNK_DURATION, audio_duration)
                 audio_text = r.record(source, offset=chunk_start, duration=chunk_end-chunk_start)
-                text = r.recognize_google(audio_text)
+                text = r.recognize_google(audio_text, language='ko-KR')
 
                 # Display the text for this chunk
                 st.header(f"Text from Audio (Chunk {i+1}/{num_chunks})")
